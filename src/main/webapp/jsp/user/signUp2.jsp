@@ -228,7 +228,7 @@ span{
 					}
 				}
 			};
-			xmlhttp.open("GET", "/guoya/user/checkUser.action?userName="+userName, true);
+			xmlhttp.open("GET", "/guoya-medium/user/checkUser.action?userName="+userName, true);
 			xmlhttp.send();
 			
 		}
