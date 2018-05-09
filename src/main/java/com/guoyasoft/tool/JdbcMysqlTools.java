@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class JdbcMysqlTools {
 	public static Connection getConnection() {
-		
+
 		// 第1步：选择驱动，有mysql的，有orace，类似不同版本的浏览器
 		String driver = "com.mysql.jdbc.Driver";
 		// 第2步：提供链接地址，哪台主机，哪个应用port，哪个实例（类似tomcat的应用名）
@@ -29,27 +29,22 @@ public class JdbcMysqlTools {
 		}
 		return conn;
 	}
-	
-	
-	public static int update(String sql) {
+
+	public static int update(String sql) throws Exception {
 		System.out.println(sql);
-		int result=0;
+		int result = 0;
 		// 第1步：建立数据库链接
 		Connection conn = JdbcMysqlTools.getConnection();
 		// 第2步：写SQL魔板
 		// 第3步：按照真实数据生成执行SQL
 		Statement st;
 		ResultSet set;
-		try {
-			st=conn.createStatement();
-			// 执行拼装好的sql,如果是更新，则返回更新条数
-			result = st.executeUpdate(sql);
-			// 关闭链接
-			st.close();
-			conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		st = conn.createStatement();
+		// 执行拼装好的sql,如果是更新，则返回更新条数
+		result = st.executeUpdate(sql);
+		// 关闭链接
+		st.close();
+		conn.close();
 		return result;
 	}
 }
