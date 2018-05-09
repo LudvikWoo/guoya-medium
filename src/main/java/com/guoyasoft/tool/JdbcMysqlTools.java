@@ -12,7 +12,7 @@ public class JdbcMysqlTools {
 		// 第1步：选择驱动，有mysql的，有orace，类似不同版本的浏览器
 		String driver = "com.mysql.jdbc.Driver";
 		// 第2步：提供链接地址，哪台主机，哪个应用port，哪个实例（类似tomcat的应用名）
-		String url = "jdbc:mysql://47.98.226.232:3308/guoya_test";// 127.0.0.1是本机地址，XE是精简版Oracle的默认数据库名
+		String url = "jdbc:mysql://47.98.226.232:3308/guoya_test?useUnicode=true&characterEncoding=utf8";// 127.0.0.1是本机地址，XE是精简版Oracle的默认数据库名
 		// 第3步：登录，用户名、密码
 		String username = "root";
 		String password = "123456";
