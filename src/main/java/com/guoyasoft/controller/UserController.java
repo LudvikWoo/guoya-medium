@@ -56,7 +56,7 @@ public class UserController {
 				mapper.insert(gu);
 			}catch(Exception e){
 				e.printStackTrace();
-				return "user/signUp2";
+				return "user/signUp";
 			}
 			
 			return "user/login";
