@@ -62,7 +62,7 @@ public class UserController {
 			return "user/login";
 		}else{
 			System.out.println("验证未通过");
-			return "user/signUp2";
+			return "user/signUp";
 		}
 	}
 

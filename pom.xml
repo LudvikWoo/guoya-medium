@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>guoya-medium</name>
-	<description/>
+	<description />
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.0.5.RELEASE</spring.version>
@@ -23,7 +23,17 @@
 			<artifactId>jaxws-rt</artifactId>
 			<version>2.1.4</version>
 		</dependency>
-
+		<!-- cxf依赖包：2个 -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>3.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.1.8</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.castor/castor -->
 		<dependency>
 			<groupId>org.codehaus.castor</groupId>
@@ -250,26 +260,26 @@
 		</dependency>
 	</dependencies>
 	<build>
-	<resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <includes>
-                <include>**/*.properties</include>
-                <include>**/*.xml</include>
-                <include>**/*.tld</include>
-            </includes>
-            <filtering>false</filtering>
-        </resource>
-        <resource>
-            <directory>src/main/java</directory>
-            <includes>
-                <include>**/*.properties</include>
-                <include>**/*.xml</include>
-                <include>**/*.tld</include>
-            </includes>
-            <filtering>false</filtering>
-        </resource>
-    </resources>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+					<include>**/*.tld</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+					<include>**/*.tld</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -291,18 +301,15 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
-				
-				
+
+
 				<configuration>
 					<url>http://47.98.226.232:8080/manager/text</url>
 					<username>tomcat</username>
 					<password>tomcat</password>
 				</configuration>
-				<!-- <configuration>
-					<url>http://localhost:8080/manager/text</url>
-					<username>deployer</username>
-					<password>654321</password>
-				</configuration> -->
+				<!-- <configuration> <url>http://localhost:8080/manager/text</url> <username>deployer</username> 
+					<password>654321</password> </configuration> -->
 			</plugin>
 		</plugins>
 	</build>
