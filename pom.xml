@@ -24,7 +24,7 @@
 			<version>2.1.4</version>
 		</dependency>
 		<!-- cxf依赖包：2个 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxws</artifactId>
 			<version>3.1.8</version>
@@ -33,7 +33,7 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http</artifactId>
 			<version>3.1.8</version>
-		</dependency>
+		</dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.codehaus.castor/castor -->
 		<dependency>
 			<groupId>org.codehaus.castor</groupId>
