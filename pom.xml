@@ -16,6 +16,12 @@
 		<mysql.version>5.1.35</mysql.version>
 	</properties>
 	<dependencies>
+		<!--性能监控 -->
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-core</artifactId>
+			<version>1.60.0</version>
+		</dependency>
 		<!-- soap接口 -->
 		<!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-rt -->
 		<dependency>
@@ -24,16 +30,10 @@
 			<version>2.1.4</version>
 		</dependency>
 		<!-- cxf依赖包：2个 -->
-		<!-- <dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>3.1.8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-			<version>3.1.8</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.cxf</groupId> <artifactId>cxf-rt-frontend-jaxws</artifactId> 
+			<version>3.1.8</version> </dependency> <dependency> <groupId>org.apache.cxf</groupId> 
+			<artifactId>cxf-rt-transports-http</artifactId> <version>3.1.8</version> 
+			</dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.codehaus.castor/castor -->
 		<dependency>
 			<groupId>org.codehaus.castor</groupId>
