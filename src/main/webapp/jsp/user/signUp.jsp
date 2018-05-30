@@ -61,8 +61,11 @@ span{
 			}
 		});
 		function userName(){
-			var reg= /^[a-zA-Z0-9_-]{4,16}$/;
-			return validate("#userName",reg,"4到16位（字母，数字，下划线，减号）");
+			/* var reg= /^[a-zA-Z0-9_-]{4,16}$/;
+			return validate("#userName",reg,"4到16位（字母，数字，下划线，减号）"); */
+
+			var reg= /^[a-zA-Z0-9]{1,8}$/;
+			return validate("#userName",reg,"1到8位（英文字母，数字）");
 		}
 		$("#realName").blur(function() {
 			realName();
@@ -77,8 +80,10 @@ span{
 			comparePwd();
 		});
 		function password(){
-			var reg= /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
-			validate("#password",reg,"最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符(!@#$%^&*? )");
+			/* var reg= /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+			validate("#password",reg,"最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符(!@#$%^&*? )"); */
+			var reg= /^[a-zA-Z]{6,8}$/;
+			return validate("#password",reg,"6到8位（英文字母）");
 		}
 
 
@@ -86,8 +91,10 @@ span{
 			comparePwd();
 		});
 		function password2(){
-			var reg= /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
-			validate("#password2",reg,"最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符");
+			/* var reg= /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+			validate("#password2",reg,"最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"); */
+			var reg= /^[a-zA-Z]{6,8}$/;
+			return validate("#password",reg,"6到8位（英文字母）");
 		}
 
 
