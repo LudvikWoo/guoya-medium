@@ -303,11 +303,13 @@ span{
 			<tr>
 				<td>班级：</td>
 				<td>
-					<select id="classType" name="classType">
+					<input type="radio" name="classType" value="1" checked="checked">基础班
+					<input type="radio" name="classType" value="2">提高班
+					<!-- <select id="classType" name="classType">
 						<option value="0">——请选择——</option>
 						<option value="1">基础班</option>
 						<option value="2">提高班</option>
-					</select>
+					</select> -->
 				</td>
 				<td>  <span>*</span> <span id="classTypeWarn"></span></td>
 			</tr>
