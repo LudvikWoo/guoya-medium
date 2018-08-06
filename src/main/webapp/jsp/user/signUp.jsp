@@ -97,14 +97,14 @@ span{
 			return validate("#password",reg,"6到8位（英文字母）");
 		}
 
-
+/* 
 		$("#weixin").blur(function() {
 			weixin();
 		});
 		function weixin(){
 			var reg= /^[-_a-zA-Z0-9]{6,20}$/;
 			validate("#weixin",reg,"6至20位，字母，数字，减号，下划线");
-		}
+		} */
 
 		$("#phone").blur(function() {
 			phone();
@@ -114,13 +114,13 @@ span{
 			validate("#phone",reg,"11位数字");
 		}
 
-		$("#address").blur(function() {
+	/* 	$("#address").blur(function() {
 			address();
 		});
 		function address(){
 			var reg= /^[\u4e00-\u9fa5a-zA-Z0-9_-]{4,}$/;
 			validate("#address",reg,"大于4位");
-		}
+		} */
 
 		$("#age").blur(function() {
 			age();
@@ -137,21 +137,21 @@ span{
 			var reg= /^1234$/;
 			return validate("#checkCode",reg,"验证码不正确");
 		}
-		$("#classType").blur(function() {
+/* 		$("#classType").blur(function() {
 			classType();
 		});
 		function classType(){
 			var reg= /^[^0]$/;
 			return validate("#classType",reg,"请选择");
-		}
+		} */
 		
-		$("#education").blur(function() {
+		/* $("#education").blur(function() {
 			education();
 		});
 		function education(){
 			var reg= /^[^0]$/;
 			return validate("#education",reg,"请选择");
-		}
+		} */
 		
 		
 		function comparePwd(){
@@ -187,7 +187,6 @@ span{
 		}
 
 		$("#submitBtn").click(function(){
-
 			userName();
 			realName();
 			password();
@@ -197,8 +196,8 @@ span{
 			//address();
 			age();
 			checkCode();		
-			education();
-			classType();
+			/* education();
+			classType(); */
 			
 			if(valCount>0){
 				return ;
@@ -267,7 +266,7 @@ span{
 				<td><input type="password" id="password2" name="password2"> </td>
 				<td>  <span>*</span> <span id="password2Warn"></span></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>微信号：</td>
 				<td><input type="text" id="weixin" name="weixin"> </td>
 				<td>  <span id="weixinWarn"></span></td>
@@ -276,7 +275,7 @@ span{
 				<td>地址：</td>
 				<td><input type="text" id="address" name="address"> </td>
 				<td>  <span id="addressWarn"></span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>手机：</td>
 				<td><input type="text" id="phone" name="phone"> </td>
@@ -286,7 +285,7 @@ span{
 				<td>年龄：</td>
 				<td><input type="text" id="age" name="age"> </td>
 				<td>  <span>*</span> <span id="ageWarn"></span></td>
-			</tr>
+			</tr><!-- 
 			<tr>
 				<td>学历：</td>
 				<td>
@@ -299,20 +298,20 @@ span{
 					</select>
 				</td>
 				<td>  <span>*</span> <span id="educationWarn"></span></td>
-			</tr>
-			<tr>
+			</tr> -->
+			<!-- <tr>
 				<td>班级：</td>
 				<td>
 					<input type="radio" name="classType" value="1" checked="checked">基础班
 					<input type="radio" name="classType" value="2">提高班
-					<!-- <select id="classType" name="classType">
+					<select id="classType" name="classType">
 						<option value="0">——请选择——</option>
 						<option value="1">基础班</option>
 						<option value="2">提高班</option>
-					</select> -->
+					</select>
 				</td>
 				<td>  <span>*</span> <span id="classTypeWarn"></span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>校验码：</td>
 				<td><input type="text" id="checkCode" name="checkCode"> 1234  </td>
